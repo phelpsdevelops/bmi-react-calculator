@@ -6,7 +6,9 @@ const App = () => {
   const [height, setHeight]= useState("");
   const [weight, setWeight]= useState("");
   const [result, setResult]= useState("");
-
+  useEffect(()=>{
+      calculateBMI();
+  },[height,weight])
   const calculateBMI = () =>{
 
     if(!height || !weight){
@@ -21,7 +23,7 @@ const App = () => {
     if(bmi<18.5) category="underweight";
     else if(bmi <25){ category="normal weight"}   
     else if( bmi <30) {category="overweight"}
-    else category="obese"
+    else category="obese";
   
 
     setResult(`Your BMI is ${bmi}: You are ${category}`)
