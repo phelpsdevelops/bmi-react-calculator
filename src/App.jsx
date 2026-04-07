@@ -44,7 +44,7 @@ const App = () => {
           <input type="number"  id="weight" placeholder='e.g. 65'  value={weight} onChange={(e)=>setWeight(e.target.value)}/>
 
           {/* button */}
-          <button onClick={calculateBMI}>Calculate</button>
+          {/* <button onClick={calculateBMI}>Calculate</button> */}
 
           {/* result */}
           <div id="result">
